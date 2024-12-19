@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panelSlide = new System.Windows.Forms.Panel();
+            this.checkOutBTN = new System.Windows.Forms.Button();
             this.buttonSetting = new System.Windows.Forms.Button();
             this.buttonReservation = new System.Windows.Forms.Button();
             this.buttonRoom = new System.Windows.Forms.Button();
@@ -54,11 +55,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.userControlRoom1 = new MiniSystem.User_Control.UserControlRoom();
-            this.userControlGuest21 = new MiniSystem.User_Control.UserControlGuest2();
-            this.userControlDashBoard1 = new MiniSystem.User_Control.UserControlDashBoard();
-            this.userControlComingSoon1 = new MiniSystem.User_Control.UserControlComingSoon();
-            this.userControlReservation1 = new MiniSystem.User_Control.UserControlReservation();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
@@ -68,13 +64,13 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panelSlide);
+            this.panel1.Controls.Add(this.checkOutBTN);
             this.panel1.Controls.Add(this.buttonSetting);
             this.panel1.Controls.Add(this.buttonReservation);
             this.panel1.Controls.Add(this.buttonRoom);
@@ -105,6 +101,24 @@
             this.panelSlide.Size = new System.Drawing.Size(10, 63);
             this.panelSlide.TabIndex = 0;
             // 
+            // checkOutBTN
+            // 
+            this.checkOutBTN.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.checkOutBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkOutBTN.FlatAppearance.BorderSize = 0;
+            this.checkOutBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkOutBTN.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkOutBTN.ForeColor = System.Drawing.Color.Yellow;
+            this.checkOutBTN.Image = ((System.Drawing.Image)(resources.GetObject("checkOutBTN.Image")));
+            this.checkOutBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.checkOutBTN.Location = new System.Drawing.Point(15, 460);
+            this.checkOutBTN.Name = "checkOutBTN";
+            this.checkOutBTN.Size = new System.Drawing.Size(272, 63);
+            this.checkOutBTN.TabIndex = 5;
+            this.checkOutBTN.Text = "Check Out";
+            this.checkOutBTN.UseVisualStyleBackColor = false;
+            this.checkOutBTN.Click += new System.EventHandler(this.checkOutBTN_Click);
+            // 
             // buttonSetting
             // 
             this.buttonSetting.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -115,7 +129,7 @@
             this.buttonSetting.ForeColor = System.Drawing.Color.Yellow;
             this.buttonSetting.Image = ((System.Drawing.Image)(resources.GetObject("buttonSetting.Image")));
             this.buttonSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSetting.Location = new System.Drawing.Point(12, 460);
+            this.buttonSetting.Location = new System.Drawing.Point(12, 529);
             this.buttonSetting.Name = "buttonSetting";
             this.buttonSetting.Size = new System.Drawing.Size(272, 63);
             this.buttonSetting.TabIndex = 5;
@@ -373,67 +387,10 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.userControlRoom1);
-            this.panel6.Controls.Add(this.userControlGuest21);
-            this.panel6.Controls.Add(this.userControlDashBoard1);
-            this.panel6.Controls.Add(this.userControlComingSoon1);
-            this.panel6.Controls.Add(this.userControlReservation1);
             this.panel6.Location = new System.Drawing.Point(287, 113);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1079, 578);
             this.panel6.TabIndex = 0;
-            // 
-            // userControlRoom1
-            // 
-            this.userControlRoom1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlRoom1.Location = new System.Drawing.Point(0, 0);
-            this.userControlRoom1.Margin = new System.Windows.Forms.Padding(4);
-            this.userControlRoom1.Name = "userControlRoom1";
-            this.userControlRoom1.Size = new System.Drawing.Size(1079, 578);
-            this.userControlRoom1.TabIndex = 0;
-            this.userControlRoom1.Visible = false;
-            this.userControlRoom1.Load += new System.EventHandler(this.userControlRoom1_Load);
-            // 
-            // userControlGuest21
-            // 
-            this.userControlGuest21.BackColor = System.Drawing.Color.Transparent;
-            this.userControlGuest21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlGuest21.Location = new System.Drawing.Point(0, 0);
-            this.userControlGuest21.Margin = new System.Windows.Forms.Padding(4);
-            this.userControlGuest21.Name = "userControlGuest21";
-            this.userControlGuest21.Size = new System.Drawing.Size(1079, 578);
-            this.userControlGuest21.TabIndex = 0;
-            this.userControlGuest21.Visible = false;
-            // 
-            // userControlDashBoard1
-            // 
-            this.userControlDashBoard1.BackColor = System.Drawing.Color.Transparent;
-            this.userControlDashBoard1.Location = new System.Drawing.Point(-287, 0);
-            this.userControlDashBoard1.Margin = new System.Windows.Forms.Padding(4);
-            this.userControlDashBoard1.Name = "userControlDashBoard1";
-            this.userControlDashBoard1.Size = new System.Drawing.Size(1365, 607);
-            this.userControlDashBoard1.TabIndex = 0;
-            this.userControlDashBoard1.Visible = false;
-            // 
-            // userControlComingSoon1
-            // 
-            this.userControlComingSoon1.Location = new System.Drawing.Point(0, 0);
-            this.userControlComingSoon1.Margin = new System.Windows.Forms.Padding(4);
-            this.userControlComingSoon1.Name = "userControlComingSoon1";
-            this.userControlComingSoon1.Size = new System.Drawing.Size(1079, 578);
-            this.userControlComingSoon1.TabIndex = 0;
-            this.userControlComingSoon1.Visible = false;
-            // 
-            // userControlReservation1
-            // 
-            this.userControlReservation1.BackColor = System.Drawing.Color.Transparent;
-            this.userControlReservation1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlReservation1.Location = new System.Drawing.Point(0, 0);
-            this.userControlReservation1.Margin = new System.Windows.Forms.Padding(5);
-            this.userControlReservation1.Name = "userControlReservation1";
-            this.userControlReservation1.Size = new System.Drawing.Size(1079, 578);
-            this.userControlReservation1.TabIndex = 0;
-            this.userControlReservation1.Visible = false;
             // 
             // timer1
             // 
@@ -468,7 +425,6 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -506,5 +462,7 @@
         private User_Control.UserControlGuest2 userControlGuest21;
         private User_Control.UserControlRoom userControlRoom1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button checkOutBTN;
+        private UserControlCheckOut userControlCheckOut1;
     }
 }

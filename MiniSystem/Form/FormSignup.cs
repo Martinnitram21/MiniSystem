@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using static MiniSystem.Class1;
+using static MiniSystem.Class1;
 
 namespace MiniSystem
 {
@@ -19,7 +19,7 @@ namespace MiniSystem
         {
             InitializeComponent();
         }
-        //UserManager userManager = new UserManager();
+        UserManager userManager = new UserManager();
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -31,9 +31,9 @@ namespace MiniSystem
         }
 
         private void signUpBTN_Click(object sender, EventArgs e)
-        {   
+        {
             //old sign-up
-            /*
+            
             String user = userTXT.Text;
             String pass = passTXT.Text;
             if (userTXT.Text != "" && passTXT.Text != "" || passTXT.Text != "" && passTXT.Text != "")
@@ -53,46 +53,50 @@ namespace MiniSystem
             {
                 MessageBox.Show("Fields Required", "Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            */
-             try
-            {
-                string connstring = "server=localhost;uid=root;pwd=martinjericho22@2002;database=minisystem";
-                string sql = "INSERT INTO login_table (login_user,login_pass) VALUES('" + userTXT.Text + " ' , '" + passTXT.Text + "')";
-                MySqlConnection con = new MySqlConnection();
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                MySqlDataReader reader;
+            
+            // try
+            //{
+            //    string connstring = "server=localhost;uid=root;pwd=martinjericho22@2002;database=hotelsystem";
+            //    string sql = "INSERT INTO hotel_login (hotel_user, hotel_pass) VALUES('" + userTXT.Text + " ' , '" + passTXT.Text + "')";
+            //    MySqlConnection con = new MySqlConnection();
+            //    MySqlCommand cmd = new MySqlCommand(sql, con);
+            //    MySqlDataReader reader;
 
-                con.ConnectionString = connstring;
+            //    con.ConnectionString = connstring;
 
-                String username = userTXT.Text;
-                String password = passTXT.Text;
+            //    String username = userTXT.Text;
+            //    String password = passTXT.Text;
 
-                if (String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
-                {
-                    MessageBox.Show("Username and Password are Required");
-                }
-                else
-                {
-                    try
-                    {
-                        con.Open();
-                        reader = cmd.ExecuteReader();
-                        MessageBox.Show("Sign-up Complete");
-                        con.Close();
-                        this.Hide();
+            //    if (String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
+            //    {
+            //        MessageBox.Show("Username and Password are Required");
+            //    }
+            //    else
+            //    {
+            //        if (passTXT.Text == rePassTXT.Text)
+            //            try
+            //        {
+            //            con.Open();
+            //            reader = cmd.ExecuteReader();
+            //            MessageBox.Show("Sign-up Successfully", "Hotel Management System", MessageBoxButtons.OK, MessageBoxIcon.None);
+            //            con.Close();
+            //            this.Hide();
 
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
-
-                }
-             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show("Error: " + ex.Message);
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Re-Enter Password", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        }
+            //    }
+            // }
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error: " + ex.Message);
+            //}
         }
 
 

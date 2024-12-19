@@ -13,20 +13,32 @@ namespace MiniSystem.User_Control
 {
     public partial class UserControlGuest : UserControl
     {
+        //private bool isClearing = false;
+        //private TabPage previousTab;
         public UserControlGuest()
         {
             InitializeComponent();
+            //tabControlGuest.Deselecting += tabControlGuest_Deselecting;
+
+            // Initialize the ListView columns
+            listViewGuest.Columns.Add("GuestID", 100);
+            listViewGuest.Columns.Add("LastName", 100);
+            listViewGuest.Columns.Add("FirstName", 150);
+            listViewGuest.Columns.Add("Phone#", 145);
+            listViewGuest.Columns.Add("Address", 145);
         }
-        public void Clear() 
+        public void Clear1() 
         {
+            //isClearing = true; // Set the flag to indicate clearing is in progress
             guestIDTXT.Clear();
             lastNameTXT.Clear();
             firstNameTXT.Clear();
             phoneNoTXT.Clear();
             addressTXT.Clear();
+            //isClearing = false; // Reset the flag after clearing is done
             tabControlGuest.SelectedTab = tabPageAddGuest;
         }
-        public void Clear1() 
+        public void Clear2() 
         {
             guestIDTXT1.Clear();
             lastNameTXT1.Clear();
@@ -56,7 +68,7 @@ namespace MiniSystem.User_Control
                 newitem.SubItems.Add(firstNameTXT.Text);
                 newitem.SubItems.Add(phoneNoTXT.Text);
                 newitem.SubItems.Add(addressTXT.Text);
-                Clear();
+                Clear1();
                 listViewGuest.Items.Add(newitem);
                 MessageBox.Show("Successfully Save");
             }
@@ -71,7 +83,7 @@ namespace MiniSystem.User_Control
                 listViewGuest.SelectedItems[0].SubItems[2].Text = firstNameTXT.Text;
                 listViewGuest.SelectedItems[0].SubItems[3].Text = phoneNoTXT.Text;
                 listViewGuest.SelectedItems[0].SubItems[4].Text = addressTXT.Text;
-                Clear();
+                Clear1();
                 MessageBox.Show("Data Successfully Updated!!!");
             }
             else
@@ -118,12 +130,16 @@ namespace MiniSystem.User_Control
 
         private void tabControlGuest_Leave(object sender, EventArgs e)
         {
-            Clear();
+            //if (tabControlGuest.SelectedTab != previousTab)
+            {
+                Clear1();
+                //previousTab = tabControlGuest.SelectedTab; // Update the previous tab
+            }
         }
 
         private void tabPageUpdateDeleteGuest_Leave(object sender, EventArgs e)
         {
-            Clear();
+            Clear1();
         }
 
         private void tabPageAddGuest_Click(object sender, EventArgs e)
@@ -134,6 +150,15 @@ namespace MiniSystem.User_Control
         private void tabPageUpdateDeleteGuest_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabControlGuest_Deselecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (e.TabPage == tabPageAddGuest || e.TabPage == tabPageUpdateDeleteGuest)
+            {
+                // Clear the controls when switching away from the relevant tabs
+                Clear1();
+            }
         }
     }
 }

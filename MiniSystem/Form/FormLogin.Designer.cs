@@ -47,7 +47,6 @@
             this.pictureBoxMinimize = new System.Windows.Forms.PictureBox();
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHide)).BeginInit();
@@ -140,7 +139,6 @@
             // 
             // groupBoxLogin
             // 
-            this.groupBoxLogin.Controls.Add(this.button1);
             this.groupBoxLogin.Controls.Add(this.pictureBoxShow);
             this.groupBoxLogin.Controls.Add(this.buttonExit);
             this.groupBoxLogin.Controls.Add(this.buttonLogin);
@@ -157,6 +155,7 @@
             this.groupBoxLogin.TabIndex = 0;
             this.groupBoxLogin.TabStop = false;
             this.groupBoxLogin.Text = "Admin";
+            this.groupBoxLogin.Enter += new System.EventHandler(this.groupBoxLogin_Enter);
             // 
             // pictureBoxShow
             // 
@@ -254,15 +253,6 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(241, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 27);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -314,7 +304,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
     }
 }
 

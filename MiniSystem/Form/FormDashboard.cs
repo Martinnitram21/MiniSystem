@@ -19,10 +19,16 @@ namespace MiniSystem
         UserControlGuest2 userControlGuest = new UserControlGuest2();
         UserControlReservation userControlReservation = new UserControlReservation();
         UserControlRoom userControlRoom = new UserControlRoom();
+        //UserControlGuest userControlGuest11 = new UserControlGuest();
         public string Username;
         public FormDashboard()
         {
             InitializeComponent();
+        }
+
+        public void Display()
+        {
+            //DbReservation.DisplayAndSearch("Select reservation_id, client_name, room_type, room_number, date_in, date_out From hotel_reservation", dataGridView1);
         }
 
         private void MovePanel(Control btn)
@@ -47,8 +53,8 @@ namespace MiniSystem
             if (DialogResult.Yes == result)
             {
                 timer1.Stop();
-                this.Close();
                 fl.ShowDialog();
+                this.Hide();
             }
         }
 
@@ -75,6 +81,7 @@ namespace MiniSystem
             userControlGuest21.Hide();
             userControlReservation1.Hide();
             userControlRoom1.Hide();
+            userControlCheckOut1.Hide();
             userControlDashBoard1.Show();
         }
 
@@ -85,8 +92,11 @@ namespace MiniSystem
             userControlComingSoon1.Hide();
             userControlDashBoard1.Hide();
             userControlRoom1.Hide();
+            userControlCheckOut1.Hide();
             userControlGuest21.Clear();
             userControlGuest21.Show();
+            //userControlGuest11.Clear1();
+            //userControlGuest11.Show();
         }
 
         private void buttonRoom_Click(object sender, EventArgs e)
@@ -96,6 +106,7 @@ namespace MiniSystem
             userControlReservation1.Hide();
             userControlDashBoard1.Hide();
             userControlComingSoon1.Hide();
+            userControlCheckOut1.Hide();
             userControlRoom1.Show();
         }
 
@@ -106,6 +117,7 @@ namespace MiniSystem
             userControlComingSoon1.Hide();
             userControlDashBoard1.Hide();
             userControlRoom1.Hide();
+            userControlCheckOut1.Hide();
             userControlReservation1.Clear();
             userControlReservation1.Show();
         }
@@ -117,6 +129,7 @@ namespace MiniSystem
             userControlReservation1.Hide();
             userControlDashBoard1.Hide();
             userControlRoom1.Hide();
+            userControlCheckOut1.Hide();
             userControlComingSoon1.Show();
         }
 
@@ -154,6 +167,18 @@ namespace MiniSystem
         private void userControlRoom1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkOutBTN_Click(object sender, EventArgs e)
+        {
+            MovePanel(checkOutBTN);
+            userControlGuest21.Hide();
+            userControlComingSoon1.Hide();
+            userControlDashBoard1.Hide();
+            userControlRoom1.Hide();
+            userControlReservation1.Hide();
+            //Display();
+            userControlCheckOut1.Show();
         }
     }
 }
