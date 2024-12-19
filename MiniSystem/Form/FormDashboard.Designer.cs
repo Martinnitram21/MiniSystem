@@ -280,9 +280,9 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Location = new System.Drawing.Point(0, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(486, 17);
+            this.label1.Size = new System.Drawing.Size(136, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "BSIT-1C SY: 2023-2024 || Group Members: Martin, Acosta, Baritugo, Ortega ";
+            this.label1.Text = "BSIT SY: 2024-2025 ||";
             // 
             // panel4
             // 
