@@ -71,7 +71,7 @@
             this.btnAddReserve.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAddReserve.Location = new System.Drawing.Point(12, 371);
             this.btnAddReserve.Name = "btnAddReserve";
-            this.btnAddReserve.Size = new System.Drawing.Size(276, 76);
+            this.btnAddReserve.Size = new System.Drawing.Size(276, 60);
             this.btnAddReserve.TabIndex = 6;
             this.btnAddReserve.Text = "Add Reservation";
             this.btnAddReserve.UseVisualStyleBackColor = false;
@@ -285,13 +285,13 @@
             this.date_out});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(355, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(309, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(493, 448);
+            this.dataGridView1.Size = new System.Drawing.Size(493, 434);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -403,7 +403,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.listViewReservation);
             this.Name = "UserControlReservation";
-            this.Size = new System.Drawing.Size(848, 448);
+            this.Size = new System.Drawing.Size(802, 434);
             this.Load += new System.EventHandler(this.UserControlReservation_Load);
             this.Leave += new System.EventHandler(this.roomNumberTXT_SelectedIndexChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

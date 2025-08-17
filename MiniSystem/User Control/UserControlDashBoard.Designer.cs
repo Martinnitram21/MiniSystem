@@ -59,7 +59,7 @@
             this.panel1.Controls.Add(this.lblGuest);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(240, 139);
+            this.panel1.Location = new System.Drawing.Point(20, 84);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 100);
             this.panel1.TabIndex = 3;
@@ -101,7 +101,7 @@
             this.panel2.Controls.Add(this.lblRoom);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(766, 139);
+            this.panel2.Location = new System.Drawing.Point(545, 84);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(230, 100);
             this.panel2.TabIndex = 3;
@@ -142,7 +142,7 @@
             this.panel3.Controls.Add(this.lblEarning);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(490, 271);
+            this.panel3.Location = new System.Drawing.Point(278, 267);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(230, 100);
             this.panel3.TabIndex = 3;
@@ -183,16 +183,15 @@
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1209, 607);
+            this.pictureBox3.Size = new System.Drawing.Size(799, 431);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
             // 
             // btnRefresh
             // 
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(958, 40);
+            this.btnRefresh.Location = new System.Drawing.Point(453, 84);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(35, 25);
             this.btnRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -204,6 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.panel3);
@@ -211,7 +211,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
             this.Name = "UserControlDashBoard";
-            this.Size = new System.Drawing.Size(1366, 607);
+            this.Size = new System.Drawing.Size(802, 434);
             this.Load += new System.EventHandler(this.UserControlDashBoard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

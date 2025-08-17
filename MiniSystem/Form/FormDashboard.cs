@@ -14,12 +14,19 @@ namespace MiniSystem
 {
     public partial class FormDashboard : Form
     {
-        UserControlDashBoard UserControlDashBoard = new UserControlDashBoard();
-        UserControlComingSoon userControlComingSoon = new UserControlComingSoon();
-        UserControlGuest2 userControlGuest = new UserControlGuest2();
-        UserControlReservation userControlReservation = new UserControlReservation();
-        UserControlRoom userControlRoom = new UserControlRoom();
+        //readonly UserControlDashBoard UserControlDashBoard = new UserControlDashBoard();
+        //readonly UserControlComingSoon userControlComingSoon = new UserControlComingSoon();
+        //readonly UserControlGuest2 userControlGuest = new UserControlGuest2();
+        //readonly UserControlReservation userControlReservation = new UserControlReservation();
+        //readonly UserControlRoom userControlRoom = new UserControlRoom();
         //UserControlGuest userControlGuest11 = new UserControlGuest();
+        readonly UserControlDashBoard ucDash = new UserControlDashBoard();
+        readonly UserControlComingSoon ucComingSoon = new UserControlComingSoon();
+        readonly UserControlGuest2 ucGuest = new UserControlGuest2();
+        readonly UserControlReservation ucReservation = new UserControlReservation();
+        readonly UserControlRoom ucRoom = new UserControlRoom();
+        readonly UserControlCheckOut ucCheck = new UserControlCheckOut();
+
         public string Username;
         public FormDashboard()
         {
@@ -54,7 +61,9 @@ namespace MiniSystem
             {
                 timer1.Stop();
                 fl.ShowDialog();
-                this.Hide();
+                //this.Hide();
+                // This will forcibly kill the current process:
+                System.Environment.Exit(0);
             }
         }
 
@@ -72,65 +81,43 @@ namespace MiniSystem
         {
             timer1.Start();
             labelUsername.Text = Username;
-            userControlDashBoard1.Show();
+            panel6.Controls.Add(ucDash);
+            ucDash.Dock = DockStyle.Fill;
         }
 
         private void buttonDashboard_Click(object sender, EventArgs e)
         {
             MovePanel(buttonDashboard);
-            userControlGuest21.Hide();
-            userControlReservation1.Hide();
-            userControlRoom1.Hide();
-            userControlCheckOut1.Hide();
-            userControlDashBoard1.Show();
+            panel6.Controls.Clear();
+            panel6.Controls.Add(ucDash);
         }
 
         private void buttonClient_Click(object sender, EventArgs e)
         {
             MovePanel(buttonGuest);
-            userControlReservation1.Hide();
-            userControlComingSoon1.Hide();
-            userControlDashBoard1.Hide();
-            userControlRoom1.Hide();
-            userControlCheckOut1.Hide();
-            userControlGuest21.Clear();
-            userControlGuest21.Show();
-            //userControlGuest11.Clear1();
-            //userControlGuest11.Show();
+            panel6.Controls.Clear();
+            panel6.Controls.Add(ucGuest);
         }
 
         private void buttonRoom_Click(object sender, EventArgs e)
         {
             MovePanel(buttonRoom);
-            userControlGuest21.Hide();
-            userControlReservation1.Hide();
-            userControlDashBoard1.Hide();
-            userControlComingSoon1.Hide();
-            userControlCheckOut1.Hide();
-            userControlRoom1.Show();
+            panel6.Controls.Clear();
+            panel6.Controls.Add(ucRoom);
         }
 
         private void buttonReservation_Click(object sender, EventArgs e)
         {
             MovePanel(buttonReservation);
-            userControlGuest21.Hide();
-            userControlComingSoon1.Hide();
-            userControlDashBoard1.Hide();
-            userControlRoom1.Hide();
-            userControlCheckOut1.Hide();
-            userControlReservation1.Clear();
-            userControlReservation1.Show();
+            panel6.Controls.Clear();
+            panel6.Controls.Add(ucReservation);
         }
 
         private void buttonSetting_Click(object sender, EventArgs e)
         {
             MovePanel(buttonSetting);
-            userControlGuest21.Hide();
-            userControlReservation1.Hide();
-            userControlDashBoard1.Hide();
-            userControlRoom1.Hide();
-            userControlCheckOut1.Hide();
-            userControlComingSoon1.Show();
+            panel6.Controls.Clear();
+            panel6.Controls.Add(ucComingSoon);
         }
 
         private void userControlGuest1_Load(object sender, EventArgs e)
@@ -172,13 +159,8 @@ namespace MiniSystem
         private void checkOutBTN_Click(object sender, EventArgs e)
         {
             MovePanel(checkOutBTN);
-            userControlGuest21.Hide();
-            userControlComingSoon1.Hide();
-            userControlDashBoard1.Hide();
-            userControlRoom1.Hide();
-            userControlReservation1.Hide();
-            //Display();
-            userControlCheckOut1.Show();
+            panel6.Controls.Clear();
+            panel6.Controls.Add(ucCheck);
         }
     }
 }

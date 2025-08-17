@@ -272,7 +272,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(538, 445);
+            this.dataGridView1.Size = new System.Drawing.Size(493, 428);
             this.dataGridView1.TabIndex = 49;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -396,7 +396,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Name = "UserControlGuest2";
-            this.Size = new System.Drawing.Size(1073, 445);
+            this.Size = new System.Drawing.Size(802, 434);
             this.Load += new System.EventHandler(this.UserControlGuest2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

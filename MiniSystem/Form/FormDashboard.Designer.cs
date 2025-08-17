@@ -307,6 +307,7 @@
             this.buttonBrowse.TabIndex = 0;
             this.buttonBrowse.Text = "Browse..";
             this.buttonBrowse.UseVisualStyleBackColor = true;
+            this.buttonBrowse.Visible = false;
             this.buttonBrowse.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel5
@@ -387,9 +388,10 @@
             // 
             // panel6
             // 
-            this.panel6.Location = new System.Drawing.Point(287, 113);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(287, 116);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1079, 578);
+            this.panel6.Size = new System.Drawing.Size(1079, 575);
             this.panel6.TabIndex = 0;
             // 
             // timer1
